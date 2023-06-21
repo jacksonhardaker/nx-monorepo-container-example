@@ -2,7 +2,14 @@
   "name": "@nx-monorepo-container-example/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "build": "nx affected -t build",
+    "test": "nx affected -t test",
+    "lint": "nx affected -t lint",
+    "build:all": "nx run-many -t build",
+    "test:all": "nx run-many -t test",
+    "lint:all": "nx run-many -t lint"
+  },
   "private": true,
   "dependencies": {
     "@nx/next": "16.3.2",
