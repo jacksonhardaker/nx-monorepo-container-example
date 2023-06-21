@@ -62,6 +62,12 @@
       "options": {
         "lintFilePatterns": ["apps/app-b/**/*.{ts,tsx,js,jsx}"]
       }
+    },
+    "build:container": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": ["docker build -t $CONTAINER_NAME-app-b -f ./apps/app-a/Dockerfile ."]
+      }
     }
   },
   "tags": []

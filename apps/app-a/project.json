@@ -60,8 +60,14 @@
       "executor": "@nx/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": [
-          "apps/app-a/**/*.{ts,tsx,js,jsx}"
+        "lintFilePatterns": ["apps/app-a/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "build:container": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": [
+          "docker build -t $CONTAINER_NAME-app-a -f ./apps/app-a/Dockerfile ."
         ]
       }
     }
