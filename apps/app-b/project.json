@@ -66,7 +66,7 @@
     "build:container": {
       "executor": "nx:run-commands",
       "options": {
-        "commands": ["docker build -t $CONTAINER_NAME-app-b -f ./apps/app-a/Dockerfile ."]
+        "commands": ["docker build -t $CONTAINER_NAME-app-b -f ./apps/app-b/Dockerfile ."]
       }
     }
   },
