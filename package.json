@@ -4,9 +4,11 @@
   "license": "MIT",
   "scripts": {
     "build": "nx affected -t build",
+    "build:container": "nx affected -t build:container",
     "test": "nx affected -t test",
     "lint": "nx affected -t lint",
     "build:all": "nx run-many -t build",
+    "build:container:all": "nx run-many -t build:container",
     "test:all": "nx run-many -t test",
     "lint:all": "nx run-many -t lint"
   },
