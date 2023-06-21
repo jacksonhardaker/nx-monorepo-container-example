@@ -1,7 +1,7 @@
 {
-  "name": "nx-monorepo-container-example",
+  "name": "app-a",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "apps/nx-monorepo-container-example",
+  "sourceRoot": "apps/app-a",
   "projectType": "application",
   "targets": {
     "build": {
@@ -9,11 +9,11 @@
       "outputs": ["{options.outputPath}"],
       "defaultConfiguration": "production",
       "options": {
-        "outputPath": "dist/apps/nx-monorepo-container-example"
+        "outputPath": "dist/apps/app-a"
       },
       "configurations": {
         "development": {
-          "outputPath": "apps/nx-monorepo-container-example"
+          "outputPath": "apps/app-a"
         },
         "production": {}
       }
@@ -22,16 +22,16 @@
       "executor": "@nx/next:server",
       "defaultConfiguration": "development",
       "options": {
-        "buildTarget": "nx-monorepo-container-example:build",
+        "buildTarget": "app-a:build",
         "dev": true
       },
       "configurations": {
         "development": {
-          "buildTarget": "nx-monorepo-container-example:build:development",
+          "buildTarget": "app-a:build:development",
           "dev": true
         },
         "production": {
-          "buildTarget": "nx-monorepo-container-example:build:production",
+          "buildTarget": "app-a:build:production",
           "dev": false
         }
       }
@@ -39,14 +39,14 @@
     "export": {
       "executor": "@nx/next:export",
       "options": {
-        "buildTarget": "nx-monorepo-container-example:build:production"
+        "buildTarget": "app-a:build:production"
       }
     },
     "test": {
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "apps/nx-monorepo-container-example/jest.config.ts",
+        "jestConfig": "apps/app-a/jest.config.ts",
         "passWithNoTests": true
       },
       "configurations": {
@@ -61,7 +61,7 @@
       "outputs": ["{options.outputFile}"],
       "options": {
         "lintFilePatterns": [
-          "apps/nx-monorepo-container-example/**/*.{ts,tsx,js,jsx}"
+          "apps/app-a/**/*.{ts,tsx,js,jsx}"
         ]
       }
     }

@@ -23,8 +23,8 @@
     "**/*.tsx",
     "**/*.js",
     "**/*.jsx",
-    "../../apps/nx-monorepo-container-example/.next/types/**/*.ts",
-    "../../dist/apps/nx-monorepo-container-example/.next/types/**/*.ts",
+    "../../apps/app-a/.next/types/**/*.ts",
+    "../../dist/apps/app-a/.next/types/**/*.ts",
     "next-env.d.ts"
   ],
   "exclude": [

@@ -12,7 +12,7 @@
       "rules": {
         "@next/next/no-html-link-for-pages": [
           "error",
-          "apps/nx-monorepo-container-example/pages"
+          "apps/app-a/pages"
         ]
       }
     },
